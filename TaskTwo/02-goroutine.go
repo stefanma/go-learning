@@ -153,7 +153,7 @@ func timeoutDemo() {
 	ch := make(chan string)
 
 	go func() {
-		time.Sleep(2 * time.Second)
+		time.Sleep(3 * time.Second)
 		ch <- "result"
 	}()
 
@@ -369,32 +369,32 @@ func contextCancelDemo() {
 	fmt.Println()
 }
 
-func main() {
-	// 基础Goroutine示例
-	basicGoroutine()
-	waitGroupDemo()
+// func main() {
+// 基础Goroutine示例
+// basicGoroutine()
+// waitGroupDemo()
 
-	// Channel通信示例
-	// channelDemo()
-	// bufferedChannelDemo()
-	// bufferedChannelDemoNew()
+// Channel通信示例
+// channelDemo()
+// bufferedChannelDemo()
+// bufferedChannelDemoNew()
 
-	// Select语句示例
-	// selectDemo()
-	// timeoutDemo()
-	// nonBlockingDemo()
-	// loopSelectDemo()
-	// quitChannelDemo()
-	// closedChannelDemo()
-	// fairnessDemo()
+// Select语句示例
+// selectDemo()
+// timeoutDemo()
+// nonBlockingDemo()
+// loopSelectDemo()
+// quitChannelDemo()
+// closedChannelDemo()
+// fairnessDemo()
 
-	// Context基础示例
-	// contextWithSelectDemo()
-	// contextCancelDemo()
+// Context基础示例
+// contextWithSelectDemo()
+// contextCancelDemo()
 
-	// 协程泄漏修复示例
-	// leakExampleRight()
-}
+// 协程泄漏修复示例
+// leakExampleRight()
+// }
 
 // 协程泄漏示例（修正做法）
 func leakExampleRight() {
