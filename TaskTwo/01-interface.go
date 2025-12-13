@@ -204,54 +204,54 @@ func (f *File) Close() error {
 	return nil
 }
 
-func main() {
-	fmt.Println("=== 接口和多态示例 ===\n")
+// func main() {
+// 	fmt.Println("=== 接口和多态示例 ===\n")
 
-	// 不同形状
-	shapes := []Shape{
-		Rectangle{Width: 10, Height: 5},
-		Circle{Radius: 5},
-		Triangle{A: 3, B: 4, C: 5},
-	}
+// 	// 不同形状
+// 	shapes := []Shape{
+// 		Rectangle{Width: 10, Height: 5},
+// 		Circle{Radius: 5},
+// 		Triangle{A: 3, B: 4, C: 5},
+// 	}
 
-	names := []string{"矩形", "圆形", "三角形"}
+// 	names := []string{"矩形", "圆形", "三角形"}
 
-	for i, shape := range shapes {
-		PrintShapeInfo(shape, names[i])
-	}
+// 	for i, shape := range shapes {
+// 		PrintShapeInfo(shape, names[i])
+// 	}
 
-	animals := []Animal{Dog{Name: "dog"}, Cat{Name: "cat"}}
+// 	animals := []Animal{Dog{Name: "dog"}, Cat{Name: "cat"}}
 
-	for _, animal := range animals {
-		PrintAnimalInfo(animal)
-	}
+// 	for _, animal := range animals {
+// 		PrintAnimalInfo(animal)
+// 	}
 
-	// 空接口
-	fmt.Println("\n=== 空接口示例 ===")
-	emptyInterfaceDemo(42)
-	emptyInterfaceDemo("hello")
-	emptyInterfaceDemo([]int{1, 2, 3})
-	emptyInterfaceDemo(map[string]int{"a": 1})
+// 	// 空接口
+// 	fmt.Println("\n=== 空接口示例 ===")
+// 	emptyInterfaceDemo(42)
+// 	emptyInterfaceDemo("hello")
+// 	emptyInterfaceDemo([]int{1, 2, 3})
+// 	emptyInterfaceDemo(map[string]int{"a": 1})
 
-	// 接口组合
-	fmt.Println("\n=== 接口组合示例 ===")
-	file := &File{name: "test.txt"}
-	var wc WriterCloser = file
-	var wr Writer = file
-	var wcr Closer = file
+// 	// 接口组合
+// 	fmt.Println("\n=== 接口组合示例 ===")
+// 	file := &File{name: "test.txt"}
+// 	var wc WriterCloser = file
+// 	var wr Writer = file
+// 	var wcr Closer = file
 
-	data := []byte("Hello World")
-	wc.Write(data)
-	wc.Close()
+// 	data := []byte("Hello World")
+// 	wc.Write(data)
+// 	wc.Close()
 
-	wr.Write(data)
-	wcr.Close()
+// 	wr.Write(data)
+// 	wcr.Close()
 
-	// // 多态数据库示例
-	fmt.Println("\n=== 数据库多态示例 ===")
-	mysql := &MySQL{connection: "mysql://localhost:3306"}
-	postgres := &PostgreSQL{connection: "postgres://localhost:5432"}
-	// mock
-	executeQuery(mysql, "SELECT * FROM users")
-	executeQuery(postgres, "SELECT * FROM orders")
-}
+// 	// // 多态数据库示例
+// 	fmt.Println("\n=== 数据库多态示例 ===")
+// 	mysql := &MySQL{connection: "mysql://localhost:3306"}
+// 	postgres := &PostgreSQL{connection: "postgres://localhost:5432"}
+// 	// mock
+// 	executeQuery(mysql, "SELECT * FROM users")
+// 	executeQuery(postgres, "SELECT * FROM orders")
+// }
