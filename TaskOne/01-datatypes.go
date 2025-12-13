@@ -292,13 +292,12 @@ func pointerPass(num *int) {
 }
 
 func main() {
-	// basicTypesDemo()
-	// arrayDemo()
-	// sliceDemo()
-	// mapDemo()
+	basicTypesDemo()
+	arrayDemo()
+	sliceDemo()
+	mapDemo()
 	pointerDemo()
-
-	// demonstrateSliceGrowth()
+	demonstrateSliceGrowth()
 }
 
 func demonstrateSliceGrowth() {

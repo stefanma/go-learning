@@ -69,3 +69,7 @@ func foo4(a string, b int) (r1, r2 int) {
 
 	return
 }
+
+func main() {
+	fmt.Println("Hello, World! Go is awesome!")
+}
