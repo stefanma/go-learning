@@ -18,7 +18,7 @@ import (
 )
 
 // Person 演示 JSON 编解码
-type Person struct {
+type Personnel struct {
 	Name string `json:"name"`
 	Age  int    `json:"age"`
 }
@@ -28,7 +28,7 @@ func jsonDemo() {
 	fmt.Println("=== JSON 编解码 ===")
 
 	// 准备要编码的结构体数据。
-	p := Person{Name: "Alice", Age: 30}
+	p := Personnel{Name: "Alice", Age: 30}
 
 	// 将结构体编码为 JSON。
 	data, err := json.Marshal(p)
