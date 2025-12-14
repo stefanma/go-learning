@@ -19,14 +19,14 @@ func (e Employee) PrintInfo() {
 	fmt.Printf("姓名: %s, 年龄: %d, 工号: %s\n", e.Name, e.Age, e.EmployeeID)
 }
 
-func main() {
-	emp := Employee{
-		Person:     Person{Name: "张三tyu", Age: 30},
-		EmployeeID: "E12345",
-	}
+// func main() {
+// 	emp := Employee{
+// 		Person:     Person{Name: "张三tyu", Age: 30},
+// 		EmployeeID: "E12345",
+// 	}
 
-	emp.PrintInfo()
+// 	emp.PrintInfo()
 
-	// 也可以直接访问嵌入字段
-	fmt.Println("直接访问:", emp.Name, emp.Age, emp.EmployeeID)
-}
+// 	// 也可以直接访问嵌入字段
+// 	fmt.Println("直接访问:", emp.Name, emp.Age, emp.EmployeeID)
+// }
