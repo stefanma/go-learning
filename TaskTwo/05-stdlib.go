@@ -333,8 +333,8 @@ func hashFile(path string) (string, error) {
 }
 
 func main() {
-	// jsonDemo()
-	// fileDemo()
-	// timeDemo()
+	jsonDemo()
+	fileDemo()
+	timeDemo()
 	hashDemo()
 }

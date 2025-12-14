@@ -423,6 +423,5 @@ func leakExample() {
 	go func() {
 		ch <- 1 // 永远阻塞，因为没有人接收
 	}()
-
 	// 应该使用缓冲channel或者接收值
 }
