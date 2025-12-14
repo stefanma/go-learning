@@ -24,15 +24,15 @@ func bufferedConsumer(ch <-chan int, wg *sync.WaitGroup) {
 	}
 }
 
-func main() {
-	bufferSize := 10
-	ch := make(chan int, bufferSize) // 带缓冲通道
+// func main() {
+// 	bufferSize := 10
+// 	ch := make(chan int, bufferSize) // 带缓冲通道
 
-	var wg sync.WaitGroup
-	wg.Add(2)
+// 	var wg sync.WaitGroup
+// 	wg.Add(2)
 
-	go bufferedProducer(ch, &wg)
-	go bufferedConsumer(ch, &wg)
+// 	go bufferedProducer(ch, &wg)
+// 	go bufferedConsumer(ch, &wg)
 
-	wg.Wait()
-}
+// 	wg.Wait()
+// }
