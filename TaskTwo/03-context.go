@@ -722,39 +722,40 @@ func poolWorker(ctx context.Context, id int, jobs <-chan int, results chan<- int
 //   - 默认运行所有示例，可以注释掉不需要的
 //   - 每个示例都是独立的，可以单独运行
 //   - 建议按顺序学习，由浅入深
-func main() {
-	fmt.Println("╔════════════════════════════════════════╗")
-	fmt.Println("║   Context上下文控制 - 完整示例集合      ║")
-	fmt.Println("╚════════════════════════════════════════╝\n")
 
-	// 提示：可以注释掉不需要运行的示例
-	// 建议初学者按顺序逐个运行，理解每个示例后再运行下一个
+// func main() {
+// 	fmt.Println("╔════════════════════════════════════════╗")
+// 	fmt.Println("║   Context上下文控制 - 完整示例集合      ║")
+// 	fmt.Println("╚════════════════════════════════════════╝\n")
 
-	// ========== 基础示例 ==========
-	// 这4个示例展示Context的基本用法
-	cancellableDemo()     // 1. 可取消的Context - 最基础的用法
-	timeoutContextDemo()  // 2. 超时控制 - 最常用的场景
-	deadlineContextDemo() // 3. 截止时间 - 绝对时间控制
-	valueContextDemo()    // 4. 传递值 - 传递请求范围数据
+// 	// 提示：可以注释掉不需要运行的示例
+// 	// 建议初学者按顺序逐个运行，理解每个示例后再运行下一个
 
-	// // ========== 进阶示例 ==========
-	// // 这3个示例展示Context的高级应用
-	cascadeCancelDemo() // 5. 级联取消 - 父子Context关系
-	multiWorkerDemo()   // 6. 多worker协同 - 统一控制多个goroutine
-	pipelineDemo()      // 7. Pipeline应用 - 数据流处理
+// 	// ========== 基础示例 ==========
+// 	// 这4个示例展示Context的基本用法
+// 	cancellableDemo()     // 1. 可取消的Context - 最基础的用法
+// 	timeoutContextDemo()  // 2. 超时控制 - 最常用的场景
+// 	deadlineContextDemo() // 3. 截止时间 - 绝对时间控制
+// 	valueContextDemo()    // 4. 传递值 - 传递请求范围数据
 
-	// // ========== 实用场景 ==========
-	// // 这3个示例展示Context在实际开发中的应用
-	httpRequestDemo()          // 8. HTTP请求超时 - Web开发必备
-	databaseQueryDemo()        // 9. 数据库查询超时 - 后端开发必备
-	contextErrorHandlingDemo() // 10. 错误处理 - 正确处理Context错误
+// 	// // ========== 进阶示例 ==========
+// 	// // 这3个示例展示Context的高级应用
+// 	cascadeCancelDemo() // 5. 级联取消 - 父子Context关系
+// 	multiWorkerDemo()   // 6. 多worker协同 - 统一控制多个goroutine
+// 	pipelineDemo()      // 7. Pipeline应用 - 数据流处理
 
-	// // ========== 综合实战 ==========
-	// // 这2个示例是完整的实战项目，综合运用前面的所有知识
-	taskManagerDemo() // 11. 任务管理系统 - 综合实战示例
-	workerPoolDemo()  // 12. Worker Pool - 并发编程经典模式
+// 	// // ========== 实用场景 ==========
+// 	// // 这3个示例展示Context在实际开发中的应用
+// 	httpRequestDemo()          // 8. HTTP请求超时 - Web开发必备
+// 	databaseQueryDemo()        // 9. 数据库查询超时 - 后端开发必备
+// 	contextErrorHandlingDemo() // 10. 错误处理 - 正确处理Context错误
 
-	fmt.Println("╔════════════════════════════════════════╗")
-	fmt.Println("║         所有示例执行完成！             ║")
-	fmt.Println("╚════════════════════════════════════════╝")
-}
+// 	// // ========== 综合实战 ==========
+// 	// // 这2个示例是完整的实战项目，综合运用前面的所有知识
+// 	taskManagerDemo() // 11. 任务管理系统 - 综合实战示例
+// 	workerPoolDemo()  // 12. Worker Pool - 并发编程经典模式
+
+// 	fmt.Println("╔════════════════════════════════════════╗")
+// 	fmt.Println("║         所有示例执行完成！             ║")
+// 	fmt.Println("╚════════════════════════════════════════╝")
+// }

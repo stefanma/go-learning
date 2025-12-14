@@ -134,7 +134,7 @@ func workerPoolDemo() {
 	pool.Close()
 }
 
-func main() {
-	producerConsumerDemo()
-	workerPoolDemo()
-}
+// func main() {
+// 	producerConsumerDemo()
+// 	workerPoolDemo()
+// }

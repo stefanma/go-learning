@@ -266,10 +266,10 @@ func loggerDemo() {
 	fmt.Println()
 }
 
-func main() {
-	//mutexDemo()
-	// rwmutexDemo()
-	// contextTimeoutDemo()
-	// contextCancelDemo()
-	// loggerDemo()
-}
+// func main() {
+// 	//mutexDemo()
+// 	// rwmutexDemo()
+// 	// contextTimeoutDemo()
+// 	// contextCancelDemo()
+// 	// loggerDemo()
+// }
