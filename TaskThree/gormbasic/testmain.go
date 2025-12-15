@@ -18,7 +18,7 @@ func main() {
 	// 1. 连接数据库（会自动创建 test.db 文件）
 	db, err := gorm.Open(sqlite.Open("test.db"), &gorm.Config{})
 	if err != nil {
-		panic("failed to connect database")
+		panic(err)
 	}
 
 	// 2. 自动建表
