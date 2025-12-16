@@ -30,13 +30,13 @@ func main() {
 	// if err != nil {
 	// 	panic(err)
 	// }
-	// lesson01.Run(db)
-	// lesson02.Run(db)
-	// lesson03.Run(db)
-	// lesson03_02.Run(db)
-	// lesson03_03.Run(db)
-	// lesson03_04.Run(db)
-	// lesson04.Run(db)
+	// lesson1.Run(db)
+	// lesson2.Run(db)
+	// lesson3.Run(db)
+	// lesson4.Run(db)
+	// lesson5.Run(db)
+	// lesson6.Run(db)
+	// lesson7.Run(db)
 
 	InitDB(&Parent{}, &Child{})
 }
