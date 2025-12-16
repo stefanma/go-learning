@@ -1,38 +1,42 @@
 package main
 
 import (
-	"fmt"
-
-	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 )
 
-// User 定义模型
-type User struct {
-	ID   uint   `gorm:"primaryKey"`
-	Name string `gorm:"size:100"`
-	Age  int
+type Parent struct {
+	ID   int `gorm:"primary_key"`
+	Name string
 }
 
-func main() {
-	// 1. 连接数据库（会自动创建 test.db 文件）
-	db, err := gorm.Open(sqlite.Open("test.db"), &gorm.Config{})
+type Child struct {
+	Parent
+	Age int
+}
+
+func InitDB(dst ...interface{}) *gorm.DB {
+	db, err := gorm.Open(mysql.Open("root:st123456@tcp(127.0.0.1:3306)/gorm?charset=utf8mb4&parseTime=True&loc=Local"))
 	if err != nil {
 		panic(err)
 	}
 
-	// 2. 自动建表
-	if err := db.AutoMigrate(&User{}); err != nil {
-		panic(err)
-	}
+	db.AutoMigrate(dst...)
 
-	// 3. 插入数据
-	user := User{Name: "Tom", Age: 18}
-	db.Create(&user)
+	return db
+}
 
-	// 4. 查询数据
-	var result User
-	db.First(&result, "name = ?", "Tom")
+func main() {
+	// db, err := gorm.Open(mysql.Open("root:st123456@tcp(127.0.0.1:3306)/gorm?charset=utf8mb4&parseTime=True&loc=Local"))
+	// if err != nil {
+	// 	panic(err)
+	// }
+	// lesson01.Run(db)
+	// lesson02.Run(db)
+	// lesson03.Run(db)
+	// lesson03_02.Run(db)
+	// lesson03_03.Run(db)
+	// lesson03_04.Run(db)
+	// lesson04.Run(db)
 
-	fmt.Printf("查询结果: %+v\n", result)
+	InitDB(&Parent{}, &Child{})
 }

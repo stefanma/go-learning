@@ -44,7 +44,7 @@ func jsonDemo() {
 	}
 	fmt.Println("缩进格式:", string(pretty))
 
-	var p2 Person
+	var p2 Personnel
 	if err := json.Unmarshal(data, &p2); err != nil {
 		panic(err)
 	}
@@ -333,8 +333,8 @@ func hashFile(path string) (string, error) {
 }
 
 func main() {
-	jsonDemo()
-	fileDemo()
+	// jsonDemo()
+	//fileDemo()
 	timeDemo()
-	hashDemo()
+	// hashDemo()
 }
